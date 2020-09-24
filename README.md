@@ -1,6 +1,7 @@
 # Stick Control
 
-Stick Control is a browser-based tool to practice snare drum rudiments.
+Stick Control is a browser-based tool to practice snare drum rudiments. A live
+version is viewable on [Heroku](https://stick-control.herokuapp.com/).
 
 Users can cycle through a single rudiment from 1 to 40 times each, at tempos between 20 and 160 BPM. The current note is highlighted on the staff.
 
