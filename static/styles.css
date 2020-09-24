@@ -1,0 +1,45 @@
+/* adjust body padding for bootstrap fixed navbar */
+body {
+  z-index: 0;
+  padding-top: 70px;
+}
+
+.table {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.active-row {
+  z-index: 1;
+  box-shadow: inset 0px 0px 30px 0px gray;
+}
+
+.active-row .pattern {
+  color: blue;
+}
+
+.pattern {
+    margin-left: 28px;
+    font-weight: bold;
+    padding-bottom:10px;
+}
+
+.subpattern {
+  margin-right:0px;
+}
+
+.number {
+  padding-bottom:20px !important;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 5%;
+}
+
+.stave-canvas {
+  width: 95%;
+}
+
+.dropdown-menu {
+    padding: 20px;
+    min-width: 300px;
+}
