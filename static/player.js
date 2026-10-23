@@ -42,7 +42,7 @@ export class PracticePlayer {
     this.worker = worker;
     this.patternCount = patternCount;
     this.onStep = onStep;
-    this.settings = { tempo: 60, repeats: 20, subdivision: 1 };
+    this.settings = { tempo: 60, repeats: 20, subdivision: 2 };
     this.position = { pattern, repeat: 1, tick: -1 };
     this.playing = false;
     this.starting = false;

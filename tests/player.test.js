@@ -110,6 +110,25 @@ test("sixteenth, eighth, and quarter clicks keep the same practice speed", async
   }
 });
 
+test("each default click follows an eighth-note highlight as the tempo changes", async () => {
+  const { player, context, moveTo } = setup();
+  const highlights = [];
+  player.onStep = ({ tick }) => {
+    if (tick % 2 === 0) highlights.push(context.currentTime);
+  };
+  await player.start();
+  for (const tempo of [20, 60, 160, 40]) {
+    player.setSettings({ tempo });
+    moveTo(context.currentTime + 4);
+  }
+  const clicks = context.tones.filter(tone => tone.startTime <= context.currentTime);
+  assert.equal(highlights.length, clicks.length);
+  for (const [index, time] of highlights.entries()) {
+    const delay = time - clicks[index].startTime;
+    assert.ok(delay >= -0.00001 && delay <= 0.02501, `Highlight ${index} is ${delay}s from its click`);
+  }
+});
+
 test("pause cancels queued clicks and excludes the pause from practice time", async () => {
   const { player, context, moveTo, messages } = setup();
   await player.start();
@@ -156,6 +175,7 @@ test("rapid pause cancels a pending audio start", async () => {
 
 test("tempo changes affect the next unscheduled intervals", async () => {
   const { player, context, moveTo } = setup();
+  player.setSettings({ subdivision: 1 });
   await player.start();
   moveTo(0.3);
   player.setSettings({ tempo: 120 });
@@ -200,5 +220,5 @@ test("invalid controls are rejected before changing settings", () => {
   for (const setting of [{ tempo: 0 }, { tempo: 161 }, { repeats: 0 }, { repeats: 41 }, { subdivision: 3 }]) {
     assert.throws(() => player.setSettings(setting), RangeError);
   }
-  assert.deepEqual(player.settings, { tempo: 60, repeats: 20, subdivision: 1 });
+  assert.deepEqual(player.settings, { tempo: 60, repeats: 20, subdivision: 2 });
 });
