@@ -1,16 +1,20 @@
-# Stick Control
+# Sticking Practice
 
 Practice 24 snare drum sticking patterns with a metronome and notation that
 follows along. Set your tempo and repeat count, then work through the patterns
 at your own pace.
 
-[Open Stick Control](https://bartgalvin.github.io/stick-control/)
+The sticking patterns come from
+[*Stick Control for the Snare Drummer*](https://www.stonepercussionbooks.com/stick-control.html)
+by George Lawrence Stone.
 
-![Stick Control practice screen](docs/preview.png)
+[Open Sticking Practice](https://bartgalvin.github.io/stick-control/)
+
+![Sticking Practice screen](docs/preview.png)
 
 ## Practice
 
-- Choose a pattern by clicking its number.
+- Click anywhere on a pattern to select it.
 - Set the tempo from 20 to 160 BPM and the repeats from 1 to 40.
 - Choose sixteenth, eighth, or quarter-note metronome clicks.
 - Click **Start** to begin. **Pause** stops playback; **Resume** continues from
@@ -42,4 +46,4 @@ Notation uses [VexFlow](https://github.com/0xfe/vexflow), bundled at version
 [Web Audio Metronome](https://github.com/cwilso/metronome).
 Their license notices are in [licenses](licenses/).
 
-Stick Control is released under the [MIT license](LICENSE).
+The app's code is released under the [MIT license](LICENSE).

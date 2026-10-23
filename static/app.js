@@ -19,12 +19,12 @@ let animation;
 const cards = patterns.map((pattern, index) => {
   const card = document.createElement("article");
   card.className = "pattern";
+  card.addEventListener("click", () => selectPattern(index));
   const button = document.createElement("button");
   button.type = "button";
   button.className = "pattern-button";
   button.textContent = `Pattern ${index + 1}`;
   button.setAttribute("aria-label", `Practice pattern ${index + 1}: ${pattern.split("").join(" ")}`);
-  button.addEventListener("click", () => selectPattern(index));
   const notation = document.createElement("div");
   notation.className = "notation";
   notation.setAttribute("aria-hidden", "true");
