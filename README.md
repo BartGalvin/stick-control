@@ -8,7 +8,7 @@ The sticking patterns come from
 [*Stick Control for the Snare Drummer*](https://www.stonepercussionbooks.com/stick-control.html)
 by George Lawrence Stone.
 
-[Open Sticking Practice](https://bartgalvin.github.io/stick-control/)
+[Open Sticking Practice](https://bartgalvin.github.io/sticking-practice/)
 
 ![Sticking Practice screen](docs/preview.png)
 
@@ -20,9 +20,9 @@ by George Lawrence Stone.
 - Click **Start** to begin. **Pause** stops playback; **Resume** continues from
   your position. **Reset** returns to the first pattern and clears practice time.
 
-R means right hand; L means left hand. Each pattern contains two bars of eighth
-notes, and BPM counts quarter-note beats. After the chosen number of repeats,
-playback moves to the next pattern. The sequence loops after pattern 24.
+Each pattern contains two bars of eighthnotes, and BPM counts quarter-note beats. 
+After the chosen number of repeats,playback moves to the next pattern. The sequence 
+loops after pattern 24.
 
 Tempo and click settings can change during practice. Switching to another
 browser tab pauses playback. Click **Resume** when you're ready to continue.
